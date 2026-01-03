@@ -96,7 +96,7 @@ The built application will be in the `dist` folder.
 2. **Choose a theme** (Light/Dark/Purple)
 3. **Add your first position**:
    - Select category (Crypto/Stocks/CS2 Items)
-   - Enter symbol (e.g., bitcoin, AAPL, AK-47 | Redline)
+   - Enter symbol (e.g., bitcoin, AAPL, AK-47 | Redline (Battle-Scarred) )
    - Enter amount and purchase price
    - Select purchase date
    - Click "Add"
