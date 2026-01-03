@@ -265,7 +265,7 @@ function InvestmentTracker() {
   const tabs = [
     { id: 'crypto', label: 'Krypto', placeholder: 'z.B. bitcoin, ethereum' },
     { id: 'stocks', label: 'Aktien', placeholder: 'z.B. AAPL, MSFT' },
-    { id: 'skins', label: 'CS2 Skins', placeholder: 'z.B. AK-47 | Redline (Field-Tested)' }
+    { id: 'skins', label: 'CS2 Items', placeholder: 'z.B. AK-47 | Redline (Field-Tested)' }
   ];
 
   // Einfache Statistiken für Charts-View
@@ -375,7 +375,7 @@ function InvestmentTracker() {
                   <div style={{ fontSize: '0.875rem', opacity: 0.8 }}>{portfolio.stocks.length} Positionen</div>
                 </div>
                 <div style={{ background: 'linear-gradient(135deg, #8b5cf6, #7c3aed)', borderRadius: '1rem', padding: '1.5rem', color: 'white' }}>
-                  <div style={{ fontSize: '0.875rem', opacity: 0.8 }}>CS2 Skins</div>
+                  <div style={{ fontSize: '0.875rem', opacity: 0.8 }}>CS2 Items</div>
                   <div style={{ fontSize: '2rem', fontWeight: 'bold', margin: '0.5rem 0' }}>€{calculateTotal('skins').toFixed(2)}</div>
                   <div style={{ fontSize: '0.875rem', opacity: 0.8 }}>{portfolio.skins.length} Positionen</div>
                 </div>
@@ -480,7 +480,7 @@ function InvestmentTracker() {
                     <div style={{ fontSize: '1rem', marginTop: '0.5rem' }}>€{calculateTotal('stocks').toFixed(2)}</div>
                   </div>
                   <div style={{ background: 'linear-gradient(135deg, #8b5cf6, #7c3aed)', borderRadius: '0.75rem', padding: '1.5rem', color: 'white' }}>
-                    <div style={{ fontSize: '0.875rem', opacity: 0.8, marginBottom: '0.5rem' }}>CS2 Skins</div>
+                    <div style={{ fontSize: '0.875rem', opacity: 0.8, marginBottom: '0.5rem' }}>CS2 Items</div>
                     <div style={{ fontSize: '2rem', fontWeight: 'bold' }}>{getPercentage('skins')}%</div>
                     <div style={{ fontSize: '1rem', marginTop: '0.5rem' }}>€{calculateTotal('skins').toFixed(2)}</div>
                   </div>
@@ -528,3 +528,4 @@ ReactDOM.render(
   React.createElement(InvestmentTracker),
   document.getElementById('root')
 );
+
