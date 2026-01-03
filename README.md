@@ -87,18 +87,18 @@ Cryptocurrency prices work out of the box using CoinGecko's free API.
 
 **Note:** Without an API key, stock prices will use demo values.
 
-### For CS:GO Skins (Optional)
-CS:GO skin prices work via Steam Market API without authentication. For better rate limits, you can optionally add a [Steam API key](https://steamcommunity.com/dev/apikey).
+### For CS2 Skins (Optional)
+CS2 skin prices work via Steam Market API without authentication. For better rate limits, you can optionally add a [Steam API key](https://steamcommunity.com/dev/apikey).
 
 ## 📖 How to Use
 
 ### Adding Assets
 
-1. Select a category tab (Crypto, Stocks, or CS:GO Skins)
+1. Select a category tab (Crypto, Stocks, or CS2 Skins)
 2. Enter the asset symbol:
    - **Crypto**: Use CoinGecko IDs (e.g., `bitcoin`, `ethereum`, `cardano`)
    - **Stocks**: Use ticker symbols (e.g., `AAPL`, `MSFT`, `TSLA`)
-   - **CS:GO Skins**: Full item name (e.g., `AK-47 | Redline (Field-Tested)`)
+   - **CS2 Skins**: Full item name (e.g., `AK-47 | Redline (Field-Tested)`)
 3. Enter the quantity you own
 4. Click "➕ Add"
 
@@ -126,7 +126,7 @@ Click the "🔄 Update" button to fetch the latest prices for all your assets.
 {
   "name": "investment-tracker",
   "version": "1.0.0",
-  "description": "Track your crypto, stocks, and CS:GO skin investments",
+  "description": "Track your crypto, stocks, and CS2 skin investments",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
@@ -218,7 +218,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - [CoinGecko API](https://www.coingecko.com/en/api) for cryptocurrency data
 - [Alpha Vantage](https://www.alphavantage.co/) for stock market data
-- [Steam Market API](https://steamcommunity.com/market/) for CS:GO skin prices
+- [Steam Market API](https://steamcommunity.com/market/) for CS2 skin prices
 - [Electron](https://www.electronjs.org/) for the desktop framework
 - [React](https://reactjs.org/) for the UI framework
 
