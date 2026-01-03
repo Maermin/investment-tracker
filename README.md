@@ -1,33 +1,47 @@
-# investment-tracker
 # 💰 Investment Tracker
 
-A desktop application to track your cryptocurrency, stock, and CS2 skin investments with real-time price updates and portfolio analytics.
+A comprehensive portfolio management tool for tracking cryptocurrency, stocks, and CS2 items in one unified dashboard.
 
-![Investment Tracker](https://img.shields.io/badge/version-1.0.0-blue.svg)
+![Version](https://img.shields.io/badge/version-2.0-blue.svg)
+![React](https://img.shields.io/badge/React-18.x-61dafb.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 
-## ✨ Features
+## 🌟 Features
 
-- 📊 **Multi-Asset Tracking**: Track cryptocurrencies, stocks, and CS2 Items in one place
-- 💹 **Real-Time Prices**: Automatic price updates via APIs
-  - Cryptocurrency: CoinGecko API (no key required)
-  - Stocks: Alpha Vantage API (free API key)
-  - CS2 Items: Steam Market API
-- 📈 **Portfolio Analytics**: View distribution and statistics
-- 💾 **Data Persistence**: Auto-save your portfolio locally
-- 📥 **Import/Export**: Backup and restore your portfolio data
-- 🎨 **Modern UI**: Beautiful gradient design with responsive layout
+### Portfolio Management
+- **Multi-Asset Support**: Track Crypto, Stocks, and CS2 Items in one place
+- **Real-time Pricing**: Automatic price updates from multiple APIs
+- **Edit & Delete**: Modify positions without losing historical data
+- **Import/Export**: Backup and restore your portfolio data as JSON
 
-## 🖥️ Screenshots
+### Advanced Analytics
+- **Portfolio Health Score**: Get instant feedback on your portfolio's overall health
+- **Diversification Analysis**: Understand your portfolio concentration with HHI-based scoring
+- **Top/Worst Performers**: Identify your best and worst investments at a glance
+- **Risk Assessment**: Automatic categorization (Low/Medium/High Risk)
+- **Average Return Tracking**: Monitor your overall portfolio performance
+- **Holding Period**: Track how long you've held each asset
 
-### Portfolio View
-Track all your investments with live price updates.
-<img width="1584" height="935" alt="image" src="https://github.com/user-attachments/assets/917abe9e-c5a3-4388-8a42-d4b9781b69ff" />
+### Performance Metrics (per Asset)
+- Current value and price
+- Purchase price and date
+- Profit/Loss (absolute and percentage)
+- Portfolio percentage
+- Holding duration in days
 
-### Statistics View
-See your portfolio distribution and asset details.
-<img width="1584" height="935" alt="image" src="https://github.com/user-attachments/assets/cf891309-7427-4f5f-af85-26c7a091f902" />
+### Customization
+- **3 Theme Options**: Light, Dark, and Purple
+- **2 Languages**: German (DE) and English (EN)
+- **2 Currencies**: EUR and USD with live exchange rates
+- **Localized Date Formats**: 
+  - German: DD/MM/YYYY
+  - English: MM/DD/YYYY
 
+## 🚀 Quick Start
+
+### Installation
+
+1. **Clone or download** this repository
 ## 📋 Prerequisites
 
 Before you begin, ensure you have the following installed:
@@ -76,167 +90,224 @@ npm run build
 
 The built application will be in the `dist` folder.
 
+### Getting Started
+
+1. **Select your preferred language** (DE/EN) in settings ⚙️
+2. **Choose a theme** (Light/Dark/Purple)
+3. **Add your first position**:
+   - Select category (Crypto/Stocks/CS2 Items)
+   - Enter symbol (e.g., bitcoin, AAPL, AK-47 | Redline)
+   - Enter amount and purchase price
+   - Select purchase date
+   - Click "Add"
+
+4. **Refresh prices** 🔄 to get latest market data
+
 ## 🔑 API Configuration
 
-### For Cryptocurrency (No Setup Required)
-Cryptocurrency prices work out of the box using CoinGecko's free API.
+### Alpha Vantage (for Stock Prices)
+1. Click the key icon 🔑 in the header
+2. Get a free API key from [Alpha Vantage](https://www.alphavantage.co/support/#api-key)
+3. Paste your key and save
+4. **Note**: Free tier allows 5 requests/minute, 500/day
 
-### For Stocks (Optional)
-1. Get a free API key from [Alpha Vantage](https://www.alphavantage.co/support/#api-key)
-2. Click the "🔑 API-Keys" button in the app
-3. Enter your Alpha Vantage API key
-4. Click "Save"
+### Data Sources
+- **Cryptocurrency**: CoinGecko API (no key required)
+- **Stocks**: Alpha Vantage API (key required for real data, falls back to mock data)
+- **CS2 Items**: Steam Community Market (no key required)
 
-**Note:** Without an API key, stock prices will use demo values.
+## 📊 Understanding the Statistics
 
-### For CS2 Items (Optional)
-CS2 skin prices work via Steam Market API without authentication. For better rate limits, you can optionally add a [Steam API key](https://steamcommunity.com/dev/apikey).
+### Portfolio Health
+Your portfolio is rated based on three factors:
+1. **Diversification Score** (30% weight)
+2. **Average Return** (40% weight)
+3. **Profitable Asset Ratio** (30% weight)
 
-## 📖 How to Use
+**Ratings:**
+- **Excellent** (≥75 points): Well-diversified with strong returns
+- **Good** (60-74 points): Solid portfolio with room for improvement
+- **Fair** (40-59 points): Needs attention in diversification or returns
+- **Poor** (<40 points): High concentration or poor performance
 
-### Adding Assets
+### Diversification Score
+Based on the Herfindahl-Hirschman Index (HHI):
+- **70-100**: Diversified - Assets well spread across portfolio
+- **40-69**: Balanced - Moderate concentration
+- **0-39**: Highly Concentrated - Few assets dominate portfolio
 
-1. Select a category tab (Crypto, Stocks, or CS2 Items)
-2. Enter the asset symbol:
-   - **Crypto**: Use CoinGecko IDs (e.g., `bitcoin`, `ethereum`, `cardano`)
-   - **Stocks**: Use ticker symbols (e.g., `AAPL`, `MSFT`, `TSLA`)
-   - **CS2 Items**: Full item name (e.g., `AK-47 | Redline (Field-Tested)`)
-3. Enter the quantity you own
-4. Click "➕ Add"
+### Risk Level
+Automatically calculated based on:
+- **Diversification Score** (lower = higher risk)
+- **Return Volatility** (higher absolute returns = higher risk)
 
-### Updating Prices
+**Categories:**
+- **Low Risk**: Well-diversified, stable returns (<25% volatility)
+- **Medium Risk**: Moderate diversification or volatility (25-50%)
+- **High Risk**: Poor diversification or high volatility (>50%)
 
-Click the "🔄 Update" button to fetch the latest prices for all your assets.
+## 💡 Tips & Best Practices
 
-**Rate Limits:**
-- Alpha Vantage: 5 calls per minute (free tier)
-- The app automatically waits 12 seconds between stock requests
+### For Cryptocurrency
+- Use lowercase coin IDs from CoinGecko (e.g., "bitcoin", "ethereum", "cardano")
+- Prices update in real-time when you click refresh
+- Images are automatically fetched from CoinGecko
 
-### Backup & Restore
+### For Stocks
+- Use official ticker symbols (e.g., AAPL, MSFT, GOOGL)
+- Configure your Alpha Vantage API key for real prices
+- Without API key, mock prices are generated for testing
+- Be mindful of rate limits (12 second delay between requests)
 
-**Export:**
-- Click "📥 Export" to download your portfolio as a JSON file
-- Filename format: `portfolio-backup-YYYY-MM-DD.json`
+### For CS2 Items
+- Use exact market names (e.g., "AK-47 | Redline (Field-Tested)")
+- Prices are fetched from Steam Community Market
+- 2-second delay between requests to avoid rate limiting
 
-**Import:**
-- Click "📤 Import" and select a previously exported JSON file
-- Your portfolio will be restored
+### Portfolio Management
+- **Regular Updates**: Click refresh 🔄 to get latest prices
+- **Backup Your Data**: Export 📥 your portfolio regularly
+- **Track Purchase Dates**: Accurate dates help calculate holding periods
+- **Review Performance**: Check Top/Worst Performers weekly
 
-## 🛠️ package.json Configuration
+## 📱 Browser Compatibility
 
-```json
-{
-  "name": "investment-tracker",
-  "version": "1.0.0",
-  "description": "Track your crypto, stocks, and CS2 skin investments",
-  "main": "main.js",
-  "scripts": {
-    "start": "electron .",
-    "build": "electron-builder"
-  },
-  "keywords": ["investment", "portfolio", "crypto", "stocks", "csgo"],
-  "author": "Maermin",
-  "license": "MIT",
-  "devDependencies": {
-    "electron": "^28.0.0",
-    "electron-builder": "^24.9.1"
-  },
-  "build": {
-    "appId": "com.investment.tracker",
-    "productName": "Investment Tracker",
-    "win": {
-      "target": "nsis",
-      "icon": "icon.ico"
-    },
-    "mac": {
-      "target": "dmg",
-      "icon": "icon.icns"
-    },
-    "linux": {
-      "target": "AppImage",
-      "icon": "icon.png"
-    },
-    "files": [
-      "main.js",
-      "index.html",
-      "renderer.js"
-    ]
-  }
-}
-```
+- ✅ Chrome/Edge (Recommended)
+- ✅ Firefox
+- ✅ Safari
+- ✅ Opera
+
+**Requirements:**
+- JavaScript enabled
+- LocalStorage enabled (for data persistence)
+- Internet connection (for price updates)
+
+## 🗂️ Data Storage
+
+All data is stored locally in your browser using LocalStorage:
+- Portfolio positions
+- Price history (last 20 data points per asset)
+- Asset images (cached)
+- User preferences (theme, language, currency)
+- API keys (stored locally, never transmitted)
+
+**Privacy Note:** No data is sent to external servers except for price API calls.
+
+## 🎨 Customization
+
+### Themes
+1. **Light Mode** ☀️: Clean white interface for daytime use
+2. **Dark Mode** 🌙: Easy on the eyes for night time
+3. **Purple Mode** 💜: Vibrant gradient theme
+
+### Language & Currency
+- **Languages**: German (DE) with DD/MM/YYYY dates, English (EN) with MM/DD/YYYY dates
+- **Currencies**: EUR (€) or USD ($) with live exchange rates
+
+## 📈 Example Use Cases
+
+### Crypto Investor
+Track your Bitcoin, Ethereum, and altcoin holdings with real-time prices from CoinGecko.
+
+### Stock Portfolio Manager
+Monitor your stock investments with Alpha Vantage integration and dividend tracking capabilities.
+
+### CS2 Skin Trader
+Keep track of your Counter-Strike 2 item investments with Steam Market pricing.
+
+### Diversified Investor
+Manage all your investments in one place - crypto, stocks, and collectibles.
 
 ## 🔧 Troubleshooting
 
-### White Screen on Startup
-1. Open Developer Tools (`F12` or `Ctrl+Shift+I`)
-2. Check the Console for errors
-3. Ensure all CDN links in `index.html` are loading correctly
+### Prices Not Updating
+- Check your internet connection
+- Verify API keys are correct
+- Check browser console for API errors
+- Ensure you're not hitting rate limits
 
-### API Not Working
-- **Crypto:** Check your internet connection (no key required)
-- **Stocks:** Verify your Alpha Vantage API key is correct
-- **Skins:** Steam Market may have rate limits; wait a few minutes
+### Data Not Saving
+- Check if LocalStorage is enabled in your browser
+- Ensure you have storage space available
+- Try exporting and reimporting your data
 
-### Build Issues
-```bash
-# Clear node_modules and reinstall
-rm -rf node_modules package-lock.json
-npm install
+### Wrong Prices Showing
+- Verify you're using correct symbols/ticker names
+- For stocks: Ensure Alpha Vantage API key is valid
+- For crypto: Check CoinGecko coin ID spelling
+- For CS2: Use exact Steam Market item names
 
-# Try building again
-npm run build
-```
+### Date Format Issues
+- Date format automatically adjusts to selected language
+- Dates are stored in ISO format (YYYY-MM-DD) internally
+- Display format: DE uses DD/MM/YYYY, EN uses MM/DD/YYYY
 
-## 🌐 Supported Platforms
+## 🛠️ Technical Details
 
-- ✅ Windows (x64)
-- ✅ macOS (Intel & Apple Silicon)
-- ✅ Linux (Ubuntu, Debian, Fedora)
+### Built With
+- **React 18** - UI framework
+- **LocalStorage API** - Data persistence
+- **Fetch API** - External data integration
 
-## 📝 Data Storage
+### APIs Used
+- [CoinGecko API](https://www.coingecko.com/api) - Cryptocurrency prices
+- [Alpha Vantage API](https://www.alphavantage.co/) - Stock market data
+- [Steam Market API](https://steamcommunity.com/market/) - CS2 item prices
+- [Exchange Rate API](https://exchangerate-api.com/) - Currency conversion
 
-All portfolio data is stored locally using `localStorage`:
-- Your portfolio positions
-- Price history (last 20 updates per asset)
-- API keys (stored encrypted in localStorage)
-
-**No data is sent to external servers** except for price API calls.
-
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+### Performance
+- Lightweight: No build process required
+- Fast: Runs entirely in browser
+- Efficient: Only fetches prices on demand
+- Responsive: Works on all screen sizes
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+MIT License - feel free to use this for personal or commercial projects.
 
-## 🙏 Acknowledgments
+## 🤝 Contributing
 
-- [CoinGecko API](https://www.coingecko.com/en/api) for cryptocurrency data
-- [Alpha Vantage](https://www.alphavantage.co/) for stock market data
-- [Steam Market API](https://steamcommunity.com/market/) for CS2 skin prices
-- [Electron](https://www.electronjs.org/) for the desktop framework
-- [React](https://reactjs.org/) for the UI framework
+Contributions, issues, and feature requests are welcome!
 
-## 📧 Support
+### Feature Requests
+- Portfolio performance charts
+- Tax reporting
+- Price alerts
+- Mobile app version
+- Additional asset classes
 
-If you encounter any issues or have questions, please [open an issue](https://github.com/Maermin/investment-tracker/issues) on GitHub.
+## 📞 Support
 
-## 🗺️ Roadmap
+If you encounter any issues:
+1. Check the Troubleshooting section above
+2. Review the Patch Notes for recent changes
+3. Check browser console for error messages
 
-- [ ] Add more chart types (line charts for price history)
-- [ ] Support for more assets (commodities, forex)
-- [ ] Dark/Light theme toggle
-- [ ] Mobile app version
-- [ ] Portfolio performance tracking
-- [ ] Price alerts and notifications
+## 🎯 Roadmap
+
+### Planned Features
+- 📊 Historical performance charts
+- 📄 PDF export for reports
+- 🔔 Price alerts and notifications
+- 📈 Performance vs. market benchmarks
+- 💼 Tax reporting tools
+- 🌍 Additional currency support
+- 📱 Mobile app version
 
 ---
 
-**Made with ❤️ for investors**
+**Current Version:** 2.0  
+**Last Updated:** January 3, 2026  
+**Author:** Maermin
+
+---
+
+### Quick Links
+- [Patch Notes](./PATCH_NOTES.md) - See what's new
+- [CoinGecko](https://www.coingecko.com/en/api) - Crypto API
+- [Alpha Vantage](https://www.alphavantage.co/) - Stock API
+- [Steam Market](https://steamcommunity.com/market/) - CS2 Items
+
+---
+
+**⭐ If you find this useful, please star the repository!**
