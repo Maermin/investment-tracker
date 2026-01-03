@@ -36,6 +36,14 @@ A comprehensive portfolio management tool for tracking cryptocurrency, stocks, a
 - **Localized Date Formats**: 
   - German: DD/MM/YYYY
   - English: MM/DD/YYYY
+    
+### Screenshots
+###Portfolio
+<img width="1902" height="1031" alt="image" src="https://github.com/user-attachments/assets/b8694d47-45d9-44ae-b0d6-b1275dc145d7" />
+
+###Statistics
+<img width="1919" height="1029" alt="image" src="https://github.com/user-attachments/assets/ab99ac56-45a4-4500-9992-8097e405db0c" />
+<img width="1919" height="770" alt="image" src="https://github.com/user-attachments/assets/6311d50e-d565-411a-92b0-6b2d551a88e2" />
 
 ## 🚀 Quick Start
 
