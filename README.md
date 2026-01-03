@@ -22,9 +22,11 @@ A desktop application to track your cryptocurrency, stock, and CS2 skin investme
 
 ### Portfolio View
 Track all your investments with live price updates.
+<img width="1584" height="935" alt="image" src="https://github.com/user-attachments/assets/917abe9e-c5a3-4388-8a42-d4b9781b69ff" />
 
 ### Statistics View
 See your portfolio distribution and asset details.
+<img width="1584" height="935" alt="image" src="https://github.com/user-attachments/assets/cf891309-7427-4f5f-af85-26c7a091f902" />
 
 ## 📋 Prerequisites
 
