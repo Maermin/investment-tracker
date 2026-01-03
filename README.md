@@ -224,7 +224,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📧 Support
 
-If you encounter any issues or have questions, please [open an issue](https://github.com/yourusername/investment-tracker/issues) on GitHub.
+If you encounter any issues or have questions, please [open an issue](https://github.com/Maermin/investment-tracker/issues) on GitHub.
 
 ## 🗺️ Roadmap
 
