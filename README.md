@@ -37,7 +37,7 @@ Before you begin, ensure you have the following installed:
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/investment-tracker.git
+git clone https://github.com/Maermin/investment-tracker.git
 cd investment-tracker
 ```
 
@@ -133,7 +133,7 @@ Click the "🔄 Update" button to fetch the latest prices for all your assets.
     "build": "electron-builder"
   },
   "keywords": ["investment", "portfolio", "crypto", "stocks", "csgo"],
-  "author": "Your Name",
+  "author": "Maermin",
   "license": "MIT",
   "devDependencies": {
     "electron": "^28.0.0",
