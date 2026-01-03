@@ -8,11 +8,11 @@ A desktop application to track your cryptocurrency, stock, and CS2 skin investme
 
 ## ✨ Features
 
-- 📊 **Multi-Asset Tracking**: Track cryptocurrencies, stocks, and CS2 skins in one place
+- 📊 **Multi-Asset Tracking**: Track cryptocurrencies, stocks, and CS2 Items in one place
 - 💹 **Real-Time Prices**: Automatic price updates via APIs
   - Cryptocurrency: CoinGecko API (no key required)
   - Stocks: Alpha Vantage API (free API key)
-  - CS2 Skins: Steam Market API
+  - CS2 Items: Steam Market API
 - 📈 **Portfolio Analytics**: View distribution and statistics
 - 💾 **Data Persistence**: Auto-save your portfolio locally
 - 📥 **Import/Export**: Backup and restore your portfolio data
@@ -89,18 +89,18 @@ Cryptocurrency prices work out of the box using CoinGecko's free API.
 
 **Note:** Without an API key, stock prices will use demo values.
 
-### For CS2 Skins (Optional)
+### For CS2 Items (Optional)
 CS2 skin prices work via Steam Market API without authentication. For better rate limits, you can optionally add a [Steam API key](https://steamcommunity.com/dev/apikey).
 
 ## 📖 How to Use
 
 ### Adding Assets
 
-1. Select a category tab (Crypto, Stocks, or CS2 Skins)
+1. Select a category tab (Crypto, Stocks, or CS2 Items)
 2. Enter the asset symbol:
    - **Crypto**: Use CoinGecko IDs (e.g., `bitcoin`, `ethereum`, `cardano`)
    - **Stocks**: Use ticker symbols (e.g., `AAPL`, `MSFT`, `TSLA`)
-   - **CS2 Skins**: Full item name (e.g., `AK-47 | Redline (Field-Tested)`)
+   - **CS2 Items**: Full item name (e.g., `AK-47 | Redline (Field-Tested)`)
 3. Enter the quantity you own
 4. Click "➕ Add"
 
